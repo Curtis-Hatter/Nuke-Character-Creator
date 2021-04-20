@@ -1,0 +1,22 @@
+body,
+html {
+  /* background-image: url("../../images/stone_tile2.png"); */
+  font-family: alagard;
+  font-size: 15px;
+  text-align: center;
+  background-color: #2a2c30;
+  color: blanchedalmond;
+  height: auto;
+}
+.title {
+  font-weight: normal;
+  text-align: center;
+}
+
+.text-bisque {
+  color: bisque;
+}
+
+h4 {
+  margin-bottom: 25px;
+}

@@ -14,31 +14,12 @@ function App() {
 
   useEffect(() => {
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.saveUser({
-      "user": {
-      "id": 1,
-      "username": "curtisH",
-      "password": "qwertyuiop",
-      "characters": [
-        {
-          "name": "klepto",
-          "level": 1,
-          "race": "elf",
-          "class": "rogue",
-          "subClass": null,
-          "abilities": [{}],
-          "feats": [],
-          "spells": [],
-        }]
-      },
-      "_id": "607e5584a4b772bfdf325c13"
-    }).then(
-      API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+    
+      API.getUser(process.env.REACT_APP_USER_ID || "607e5584a4b772bfdf325c13").then((res) => {
         // console.log(res.data.user.characters);
         setmyCharacters(res.data.user.characters);
         // console.log(myCharacters);
-      })
-    )
+      });
     
   }, []);
 

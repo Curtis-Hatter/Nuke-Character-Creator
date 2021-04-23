@@ -1,15 +1,21 @@
+// Core Dependencies
 import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
 
-import { Switch, Route } from "react-router-dom";
+// Components
 import RacePage from "../TabRace";
 import ClassPage from "../TabClass";
 import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
+import CharacterSheetPage from "../CharacterSheet";
 
 // CSS
 import "./style.css";
+
+// Close btn
+import ButtonClose from "../ButtonClose";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -41,6 +47,16 @@ function CharInfoBox(props) {
           transform: "rotate(90deg)",
         }}
       />
+{/* This this button below is supposed to close the creator */}
+
+            {/* <Link to={"/"}>
+          <ButtonClose
+            text={"Finish"}
+            selectButtonOnClick={selectButtonOnClick}
+          />
+        </Link> */}
+
+
       <Switch>
         <Route exact path={"/character-creator/name"}>
           <NameLevelPage {...props} />
@@ -59,6 +75,9 @@ function CharInfoBox(props) {
         </Route>
         <Route exact path={"/character-creator/feats"}>
           <FeatsPage {...props} />
+        </Route>
+        <Route exact path={"/character-creator/character-sheet"}>
+          <CharacterSheetPage {...props} />
         </Route>
       </Switch>
 

@@ -22,19 +22,16 @@ function ScrollListItem({
     }
   });
 
-  console.log("item ", item);
-
   return (
-    <div key={i} className="d-flex justify-content-between">
-      <p
+    <div key={i} id="list" className="d-flex justify-content-between">
+      <text
         className="text-bisque"
         onClick={() => {
-          console.log("you clicked the name of a spell");
           setActive(item);
         }}
       >
         {item.name}
-      </p>
+      </text>
       <CheckBox
         checkboxStyle={{ height: "30px", marginRight: "10px" }}
         spellName={item.name}

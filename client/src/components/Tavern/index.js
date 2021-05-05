@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// Components
 import TavernImage from "../../images/tavern/tavernx2.png";
+// import Logout from "../../components/Logout";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -15,6 +20,7 @@ const CharacterData = [
   {
     text: "Create Wizard",
     name: "Wizard",
+    isActive: true,
     styles: {
       height: "32.4%",
       width: "8.3%",
@@ -25,6 +31,7 @@ const CharacterData = [
   {
     text: "Create Rogue",
     name: "Rogue",
+    isActive: true,
     styles: {
       height: "11.4%",
       width: "9.3%",
@@ -35,6 +42,7 @@ const CharacterData = [
   {
     text: "Create Ranger",
     name: "Ranger",
+    isActive: true,
     styles: {
       height: "15.4%",
       width: "10.7%",
@@ -45,11 +53,100 @@ const CharacterData = [
   {
     text: "Create Fighter",
     name: "Fighter",
+    isActive: true,
     styles: {
       height: "15.4%",
       width: "7.3%",
       bottom: "39.2%",
       left: "65.7%",
+    },
+  },
+  {
+    text: "Warlock Coming Soon",
+    name: "warlock",
+    isActive: false,
+    styles: {
+      height: "15.4%",
+      width: "6.3%",
+      bottom: "40.2%",
+      left: "76.7%",
+    },
+  },
+  {
+    text: "Monk Coming Soon",
+    name: "monk",
+    isActive: false,
+    styles: {
+      height: "24.4%",
+      width: "7.3%",
+      bottom: "40.2%",
+      left: "91.7%",
+    },
+  },
+  {
+    text: "Barbarian Coming Soon",
+    name: "barbarian",
+    isActive: false,
+    styles: {
+      height: "28.4%",
+      width: "8.3%",
+      bottom: "15.2%",
+      left: "85.7%",
+    },
+  },
+  {
+    text: "Paladin Coming Soon",
+    name: "paladin",
+    isActive: false,
+    styles: {
+      height: "28.4%",
+      width: "8.3%",
+      bottom: "15.2%",
+      left: "59.7%",
+    },
+  },
+  {
+    text: "Sorceror Coming Soon",
+    name: "sorcerer",
+    isActive: false,
+    styles: {
+      height: "28.4%",
+      width: "8.3%",
+      bottom: "28.2%",
+      left: "52.7%",
+    },
+  },
+  {
+    text: "Druid Coming Soon",
+    name: "druid",
+    isActive: false,
+    styles: {
+      height: "33.4%",
+      width: "8.3%",
+      bottom: "8.2%",
+      left: "28.7%",
+    },
+  },
+  {
+    text: "Cleric Coming Soon",
+    name: "cleric",
+    isActive: false,
+    styles: {
+      height: "28.4%",
+      width: "9.3%",
+      bottom: "8.2%",
+      left: "3.7%",
+    },
+  },
+  {
+    text: "Bard Coming Soon",
+    name: "bard",
+    isActive: false,
+    styles: {
+      height: "31.4%",
+      width: "9.3%",
+      bottom: "27.2%",
+      left: "13.7%",
     },
   },
 ];
@@ -66,7 +163,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          left: "-16px",
+          left: "-15px",
           top: "0px",
         }}
       />
@@ -74,7 +171,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          right: "-16px",
+          right: "-15px",
           top: "0px",
           transform: "rotate(90deg)",
         }}
@@ -97,7 +194,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          right: "-16px",
+          right: "-15px",
           bottom: "-1px",
           transform: "rotate(180deg)",
         }}
@@ -106,7 +203,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          left: "-16px",
+          left: "-15px",
           bottom: "-1px",
           transform: "rotate(270deg)",
         }}
